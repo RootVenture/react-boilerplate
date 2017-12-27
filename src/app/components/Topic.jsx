@@ -8,7 +8,7 @@ const Topic = ({ match }) => (
 );
 
 Topic.propTypes = {
-  match: PropTypes.func.isRequired
+  match: PropTypes.shape({ params: PropTypes.object }).isRequired
 };
 
 export default Topic;

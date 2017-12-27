@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "description":
     "A boilerplate project featuring react, ssr, redux-little-router etc",
-  "main": "dist/server/index.js",
+  "main": "dist/server.js",
   "scripts": {
     "build:watch": "webpack --watch",
     "build:prod": "webpack -p",
-    "serve": "nodemon dist/server",
+    "serve": "nodemon dist/server.js",
     "analyze-bundle":
       "webpack -p --profile --json > stats.json && webpack-bundle-analyzer stats.json dist/public -s gzip",
     "lint": "eslint --ext .js,.jsx src/",
@@ -32,6 +32,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.36",
     "@babel/preset-env": "^7.0.0-beta.36",
+    "@babel/preset-flow": "^7.0.0-beta.36",
     "@babel/preset-react": "^7.0.0-beta.36",
     "@babel/preset-stage-2": "^7.0.0-beta.36",
     "autoprefixer": "^7.2.3",
