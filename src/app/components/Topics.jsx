@@ -1,9 +1,19 @@
+// @flow
 import React from "react";
 import { Link, Route } from "react-router-dom";
 import PropTypes from "prop-types";
 import Topic from "./Topic";
 
-const Topics = ({ match }) => (
+function foo(x: number): string {
+  if (x) {
+    return "z";
+  }
+  return "strnig";
+}
+
+foo(2);
+
+const Topics = ({ match }: { match: { url: string } }) => (
   <div>
     <h2>Topics</h2>
     <ul>
