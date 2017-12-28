@@ -7,7 +7,6 @@ import { Router } from "react-router-dom";
 import createHistory from "history/createBrowserHistory";
 import reducers from "./app/reducers/reducers";
 import App from "./app/components/App";
-import Head from "./app/components/Head";
 
 const history = createHistory();
 
@@ -31,16 +30,4 @@ const render = () => {
   );
 };
 
-const renderHead = () => {
-  ReactDOM.hydrate(
-    <Provider store={store}>
-      <Router history={history}>
-        <Head />
-      </Router>
-    </Provider>,
-    document.querySelector("head")
-  );
-};
-
 render();
-renderHead();
