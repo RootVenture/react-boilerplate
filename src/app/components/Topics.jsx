@@ -1,7 +1,14 @@
 // @flow
 import React from "react";
 import { Link, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Topic from "./Topic";
+
+const renderHelmet = () => (
+  <Helmet>
+    <title>Helmet Topicssss</title>
+  </Helmet>
+);
 
 type Props = {
   match: { url: string }
@@ -9,6 +16,7 @@ type Props = {
 
 const Topics = ({ match }: Props) => (
   <div>
+    {renderHelmet()}
     <h2>Topics</h2>
     <ul>
       <li>

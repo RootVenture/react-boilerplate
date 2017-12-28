@@ -3,12 +3,9 @@ import ReactDOM from "react-dom";
 import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 import { devToolsEnhancer } from "redux-devtools-extension";
-import { Router } from "react-router-dom";
-import createHistory from "history/createBrowserHistory";
+import { BrowserRouter } from "react-router-dom";
 import reducers from "./app/reducers/reducers";
 import App from "./app/components/App";
-
-const history = createHistory();
 
 const preloadedState = window.PRELOADED_STATE;
 
@@ -22,9 +19,9 @@ const store = createStore(
 const render = () => {
   ReactDOM.hydrate(
     <Provider store={store}>
-      <Router history={history}>
+      <BrowserRouter>
         <App />
-      </Router>
+      </BrowserRouter>
     </Provider>,
     document.getElementById("app")
   );
