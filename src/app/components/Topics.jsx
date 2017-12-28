@@ -1,19 +1,13 @@
 // @flow
 import React from "react";
 import { Link, Route } from "react-router-dom";
-import PropTypes from "prop-types";
 import Topic from "./Topic";
 
-function foo(x: number): string {
-  if (x) {
-    return "z";
-  }
-  return "strnig";
-}
+type Props = {
+  match: { url: string }
+};
 
-foo(2);
-
-const Topics = ({ match }: { match: { url: string } }) => (
+const Topics = ({ match }: Props) => (
   <div>
     <h2>Topics</h2>
     <ul>
@@ -35,9 +29,5 @@ const Topics = ({ match }: { match: { url: string } }) => (
     />
   </div>
 );
-
-Topics.propTypes = {
-  match: PropTypes.shape({ params: PropTypes.object }).isRequired
-};
 
 export default Topics;

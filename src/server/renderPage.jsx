@@ -1,13 +1,15 @@
+// @flow
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 import { StaticRouter } from "react-router";
+import type { $Request, $Response } from "express";
 import App from "../app/components/App";
 import Head from "../app/components/Head";
 import reducers from "../app/reducers/reducers";
 
-export default function renderPage(req, res) {
+export default function renderPage(req: $Request, res: $Response) {
   const store = createStore(combineReducers(reducers), { counter: 5 });
 
   const context = {};
