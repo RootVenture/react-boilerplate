@@ -5,8 +5,10 @@
 [libs]
 
 [lints]
+all=warn
 
 [options]
+include_warnings=true
 module.file_ext=.js
 module.file_ext=.jsx
 module.file_ext=.json
