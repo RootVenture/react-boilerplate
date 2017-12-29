@@ -4,19 +4,16 @@ import { Link, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Topic from "./Topic";
 
-const renderHelmet = () => (
-  <Helmet>
-    <title>Helmet Topicssss</title>
-  </Helmet>
-);
-
 type Props = {
   match: { url: string }
 };
 
 const Topics = ({ match }: Props) => (
   <div>
-    {renderHelmet()}
+    <Helmet>
+      <title>Helmet Topicssss</title>
+      <meta name="description" content="It's Gandalf" />
+    </Helmet>
     <h2>Topics</h2>
     <ul>
       <li>
